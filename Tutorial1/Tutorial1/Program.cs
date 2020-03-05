@@ -17,7 +17,7 @@ namespace Tutorial1
             if (responce.IsSuccessStatusCode)
             {
                 var htmlContent = await responce.Content.ReadAsStringAsync();
-                var regex = new Regex("[a-z0-9]+[a-z0-9]*@[a-z0-9]+\\.[a-z]{2,6}",RegexOptions.IgnoreCase);
+                var regex = new Regex("[a-z0-9]+[a-z0-9]*@[a-z0-9-]+\\.[a-z]{2,6}",RegexOptions.IgnoreCase);
 
                 var match = regex.Matches(htmlContent);
                 foreach (var item in match)
